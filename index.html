@@ -12,7 +12,7 @@
 <body style="text-align: center">
     <canvas id="unity-canvas" width=960 height=600
             style="width: 960px; height: 600px; background: #231F20"></canvas>
-    <script src="Build/CleanBuild.loader.js"></script>
+    <script src="Build/el-dorado-build.loader.js"></script>
    <!-- <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>-->
     <!--<script>
         let connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'));
@@ -21,9 +21,9 @@
     var webglPlayer;
     onload = () => {
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/CleanBuild.data.gz",
-        frameworkUrl: "Build/CleanBuild.framework.js.gz",
-        codeUrl: "Build/CleanBuild.wasm.gz",
+        dataUrl: "Build/el-dorado-build.data",
+        frameworkUrl: "Build/el-dorado-build.framework.js",
+        codeUrl: "Build/el-dorado-build.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "El Dorado Adventures",
