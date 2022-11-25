@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>El Dorado Adventures</title>
+  <link rel="shortcut icon" href="TemplateData/favicon.ico">
+  <link rel="stylesheet" href="TemplateData/style.css">
+</head>
+
+<body style="text-align: center">
+    <canvas id="unity-canvas" width=960 height=600
+            style="width: 960px; height: 600px; background: #231F20"></canvas>
+    <script src="Build/CleanBuild.loader.js"></script>
+   <!-- <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>-->
+    <!--<script>
+        let connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'));
+    </script>-->
+    <script>
+    var webglPlayer;
+    onload = () => {
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/CleanBuild.data.gz",
+        frameworkUrl: "Build/CleanBuild.framework.js.gz",
+        codeUrl: "Build/CleanBuild.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "El Dorado Adventures",
+        productVersion: "0.1",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      })
+        .then((unityInstance) => {
+          webglPlayer = unityInstance
+        })
+    }
+    </script>
+    <script src="https://unpkg.com/@solana/web3.js@1.55.0/lib/index.iife.js"></script>
+    <script src="https://unpkg.com/@solana/spl-token@0.1.8/lib/index.iife.js"></script>
+    <script src="https://unpkg.com/@metaplex/js@4.12.0/lib/index.iife.js"></script>
+</body>
+
+</html>
